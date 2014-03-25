@@ -1,0 +1,536 @@
+﻿#navbar-iframe {
+display: none !important;
+}
+
+/*
+<Variable name="bgcolor" description="Page Background Color"
+type="color" default="#fff" value="#ffffff">
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333" value="#333333">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#58a" value="#5588aa">
+<Variable name="pagetitlecolor" description="Blog Title Color"
+type="color" default="#666" value="#666666">
+<Variable name="descriptioncolor" description="Blog Description Color"
+type="color" default="#999" value="#999999">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#c60" value="#cc6600">
+<Variable name="bordercolor" description="Border Color"
+type="color" default="#ccc" value="#cccccc">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#999" value="#999999">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#666" value="#666666">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999" value="#999999">
+<Variable name="bodyfont" description="Text Font"
+type="font" default="normal normal 100% Georgia, Serif" value="normal normal 100% Georgia, Serif">
+<Variable name="headerfont" description="Sidebar Title Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif" value="normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif">
+<Variable name="pagetitlefont" description="Blog Title Font"
+type="font"
+default="normal normal 200% Georgia, Serif" value="normal normal 200% Georgia, Serif">
+<Variable name="descriptionfont" description="Blog Description Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif" value="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="postfooterfont" description="Post Footer Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif" value="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="startSide" description="Side where text starts in blog language"
+type="automatic" default="left" value="left">
+<Variable name="endSide" description="Side where text ends in blog language"
+type="automatic" default="right" value="right">
+/* Use this with templates/template-twocol.html */
+
+
+/* Begin Typography & Colors */
+* { margin: 0; padding: 0; }
+
+body { background: url(http://localhost:58729/electronicNotebook/Images/wallpaper.jpg) repeat top left; font: normal 16px cursive; color:#535353; }
+input, button, textarea, select {  font: shmuel;
+color: #535353;
+vertical-align: middle;
+border-color: transparent;
+border-bottom: solid 1px lightgray;}
+legend { display: none; }
+fieldset { border: none; }
+ul, ol { }
+ol { list-style-type: decimal;}
+table { border-collapse: collapse; width: 100%; }
+hr { display: none; }
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+a:link { text-decoration: none; color : cadetblue; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #ff6600; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none;
+color: cadetblue;
+border: 0px;
+-moz-outline-style: none;
+font-weight: bold;}
+a:hover	{ text-decoration: underline; color : #000; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
+/* BGContainer */
+.clear{margin-left: -330px;}
+#bgcontain { width: 980px; background: url(images/header-top-bkg.png) no-repeat top left; margin: 0 auto; overflow: hidden;}
+/* Header
+-----------------------------------------------
+*/
+#header {
+margin: 0;
+text-align: left;
+color:#eeeeee;
+width: 830px;
+padding: 30px 50px 30px 100px;
+position: relative;
+}
+#header h1 {
+margin: 0;
+font: bold 60px/60px "Arial", Gadget, sans-serif;
+letter-spacing: -3px;
+padding: 0px 0px 0px 0px;
+}
+#header a {
+text-decoration: none;
+color:#eeeeee;
+}
+#header a:hover {
+color:#ffffff;
+}
+#header .description {
+margin:0;
+padding:0 20px 15px;
+max-width:700px;
+text-transform:normal;
+font: bold 14px/14px Arial, Helvetica, sans-serif;
+letter-spacing: -1px;
+color:#b18f5e;
+}
+#header img {
+margin-left: auto;
+margin-right: auto;
+}
+/* Menu */
+.menu { width: 830px; padding: 0px 50px 0px 100px; background: url(http://4.bp.blogspot.com/_k_DnmK4oz2Q/S1euM-ATZdI/AAAAAAAAAh0/kS9fEDLxi_Q/s1600/header-bkg.png) no-repeat bottom; overflow: hidden; min-height: 91px;}
+/**/ * html .menu { height:1%; } /* */
+.menu ul { float: right; padding: 0px 0px 0px 0px; margin-right: 121px; background:url(http://3.bp.blogspot.com/_k_DnmK4oz2Q/S1euMxNS-XI/AAAAAAAAAh8/LPd_B6QAn5g/s1600/menu-line-bkg.png) repeat-x bottom; width: 500px;}
+.menu li ul { display: none; display: inline;
+font: normal 22px/22px shmuel;
+letter-spacing: -1px;
+float: left;
+font-weight: bold;}
+.menu li { display: inline;
+font: normal 22px/22px shmuel;
+letter-spacing: -1px;
+float: left;
+font-weight: bold;}
+.menu li a { float: left;
+color: #996633;
+padding: 20px 10px;
+font-family: shmuel;
+font-size: xx-large;
+font-weight: bold;}
+.menu li a:hover { color:#ff6600; text-decoration: none;}
+.menu .current_page_item a { color:#ff6600; background:url(http://4.bp.blogspot.com/_k_DnmK4oz2Q/S1euM2bb9mI/AAAAAAAAAh4/7_G6leJn8Fo/s1600/menu-arrow.png) no-repeat center top; }
+.menu .current_page_item a span, .menu .current_page_item a:visited span, .menu .current_page_item a:hover span { color:#ff6600; }
+/* Search */
+.menu .search { background: #ccc; width: 262px; overflow: hidden; margin-top: 59px; float: right; margin-right: -542px;}
+.menu .search input { float: left; background: #333333 url(http://1.bp.blogspot.com/_k_DnmK4oz2Q/S1eue6xIwlI/AAAAAAAAAic/tb2bjRw15rY/s1600/search-input.png) no-repeat right top; border: none; padding: 8px 8px 9px 8px; width: 168px; color:#fff; font: bold 14px/14px "Arial", sans-serif; letter-spacing: -1px;}
+.menu .search button { float: left; background: url(http://1.bp.blogspot.com/_k_DnmK4oz2Q/S1euY3WMFAI/AAAAAAAAAiY/mQzum1QAP3Y/s1600/search-button.png) no-repeat; width: 78px; height: 33px; border: none; cursor: pointer; color:#fff; vertical-align: middle; padding: 3px 5px 5px 0px; font: bold 14px/14px shmuel; letter-spacing: -1px;}
+/* Container */
+.container { width: 880px; float: left; background: #fcfcf4 url(http://1.bp.blogspot.com/_k_DnmK4oz2Q/S1et0-bgCMI/AAAAAAAAAho/IgCt1UztePI/s1600/container-bkg.png) repeat-y top center; padding: 0px 50px;}
+/* Outer-Wrapper
+----------------------------------------------- */
+#outer-wrapper {
+width: 980px;
+margin:0 auto;
+text-align:right;
+font: shmumel;
+margin-top: 60px;
+}
+
+#content-wrapper 
+{
+margin-right: 329px;
+margin-top: 20px;
+width: 395px;
+float: right;
+}
+
+#main-wrapper {
+width: 500px;
+float: right;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+margin-right: 350px;
+}
+#sidebar-wrapper {
+width: 260px;
+float: right;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+margin:0;
+font: 25px 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;
+line-height: 1.4em;
+text-transform:normal;
+letter-spacing:0em;
+color:#999999;
+}
+/* Posts
+-----------------------------------------------
+*/
+h2.date-header {
+margin:0;
+font: italic 100% 'Georgia',Trebuchet,Arial,Verdana,Sans-serif;
+line-height: 1.4em;
+text-transform:noone;
+letter-spacing:0em;
+color:#999999;
+background:url(http://3.bp.blogspot.com/_k_DnmK4oz2Q/S1et1MgtFII/AAAAAAAAAhs/XOnUAOqLZ_g/s1600/date-cat-ico.png) no-repeat left top; padding-left: 17px; color:#b8afa6;
+}
+.post {
+margin:.5em 0 0em;
+padding-bottom:1.5em;
+}
+.post h3 {
+font: bold 34px/30px Arial, sans-serif; 
+letter-spacing: -1px;
+padding: 15px 0px; 
+margin-bottom: 15px; 
+background:url(http://3.bp.blogspot.com/_k_DnmK4oz2Q/S1euMxNS-XI/AAAAAAAAAh8/LPd_B6QAn5g/s1600/menu-line-bkg.png) repeat-x bottom;
+}
+.post h3 a, .post h3 a:visited, .post h3 strong {
+display:block;
+text-decoration:none;
+color:#cc6600;
+font-weight:normal;
+}
+.post h3 strong, .post h3 a:hover {
+color:#333333;
+}
+.post-body {
+margin:1em 0 1em 0;
+line-height:1.6em;
+}
+.post ul {
+margin: 5px 0px 5px 20px;
+padding: 0px 0px 0px 0px;
+}
+.post ol {
+margin: 5px 0px 5px 20px;
+padding: 0px 0px 0px 0px;
+}
+.post ol li {
+margin: 5px 0px 5px 10px;
+padding: 0px;
+}
+.post-body blockquote {
+line-height:1.3em;
+}
+.post-footer {
+fot: 0px;
+background: #f3f4ea url(http://3.bp.blogspot.com/_k_DnmK4oz2Q/S1euNOUBEmI/AAAAAAAAAiE/o5Rs2KwYiWw/s1600/p-det-bkg.png) repeat-x bottom; text-align: left; padding: 14px 10px 20px 10px; margin-top: 5px; border-top: solid 1px #eeefe4;
+}
+
+.post-footer a{
+color: #993300;
+}
+
+.post-footer a:hover{
+color: #ff6600
+}
+
+.post-author {
+display: none;
+}
+.post-timestamp {
+display: none;
+}
+
+.post-labels{
+padding: 5px 0 0px 20px;
+background: url(http://2.bp.blogspot.com/_k_DnmK4oz2Q/S1euYe7Xi-I/AAAAAAAAAiM/s-PxJFTbfNY/s1600/p-det-tags-ico.png) no-repeat left 6px; 
+}
+
+.comment-link {
+float: right;
+margin-top:-.5em;
+padding: 5px 0 0px 20px;
+background: url(http://1.bp.blogspot.com/_k_DnmK4oz2Q/S1euYfROtjI/AAAAAAAAAiI/aJTNZ4EDwoI/s1600/p-det-com-ico.png) no-repeat left 6px; 
+}
+.post img {
+padding:4px;
+border:1px solid #cccccc;
+}
+.post blockquote {
+font: italic 13px/19px Georgia, "Times New Roman", Times, serif; padding: 5px 15px; background: #f4f3ea; margin: 10px 0px; color:#000; 
+}
+.post blockquote p {
+margin:.75em 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+color:#666666;
+font-size:15px;
+font-weight:bold;
+letter-spacing:0;
+line-height:1.4em;
+margin:1em 0;
+text-transform:none;
+}
+#comments-block {
+line-height:1.6em;
+margin:1em 0 1.5em;
+}
+#comments-block .comment-author {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#E4E2D3 none repeat scroll 0 0;
+margin:0.5em 0;
+padding-bottom:4px;
+padding-left:8px;
+padding-top:4px;
+}
+#comments-block .comment-body {
+border-left:1px solid #E4E2D3;
+border-right:1px solid #E4E2D3;
+margin-top:-7px;
+padding-left:10px;
+padding-top:10px;
+}
+#comments-block .comment-footer {
+border-bottom:1px solid #E4E2D3;
+border-left:1px solid #E4E2D3;
+border-right:1px solid #E4E2D3;
+font-size:11px;
+line-height:1.4em;
+margin:-0.25em 0 2em;
+padding-bottom:5px;
+padding-left:10px;
+text-transform:none;
+}
+#comments-block .comment-body p {
+margin:0;
+padding-bottom:15px;
+}
+.deleted-comment {
+color:gray;
+font-style:italic;
+}
+#blog-pager-newer-link {
+float: left;
+}
+#blog-pager-older-link {
+float: right;
+}
+#blog-pager {
+margin-top: -40px;
+text-align: center;
+}
+.feed-links {
+margin-top: 10px;
+clear: both;
+line-height: 2.5em;
+}
+/* Sidebar Content
+----------------------------------------------- */
+.syn { background: #f0eee4; margin-bottom: 25px; padding: 10px; margin-top: 30px;}
+.syn li { font: bold 14px/18px Arial, Helvetica, sans-serif, sans-serif; letter-spacing: -1px; padding: 2px 0px; list-style: none;}
+.syn a.rss { color:#ff6600; background: url(http://3.bp.blogspot.com/_k_DnmK4oz2Q/S1eue6vi1MI/AAAAAAAAAig/89Qn2mmnSoU/s1600/syn-1.png) no-repeat left top; padding: 2px 0px 2px 20px; }
+.syn a.tweet { color:#3399cc; background: url(http://4.bp.blogspot.com/_k_DnmK4oz2Q/S1eufJrGMzI/AAAAAAAAAik/RIX5VWn7wjs/s1600/syn-2.png) no-repeat left top; padding: 2px 0px 2px 20px; }
+
+.sidebar {
+color: #666666;
+line-height: 1.5em;
+}
+.sidebar h2 {
+margin:1.5em 0 .75em;
+font: normal 150% 'Georgia',Trebuchet,Arial,Verdana,Sans-serif;
+line-height: 1.4em;
+text-transform:normal;
+letter-spacing:0em;
+color:#999999;
+
+font: bold 18px/18px Arial, Helvetica, sans-serif, sans-serif; letter-spacing: -1px; background: #f0eee4; color:#535353; padding: 7px 5px; margin-bottom: 5px;
+}
+
+.sidebar ul {
+list-style:none;
+margin:0 0 0;
+padding:0 0 0;
+}
+.sidebar li {
+list-style-type:none;
+padding-left:15px;
+margin-left:0px;
+background: url(http://2.bp.blogspot.com/_k_DnmK4oz2Q/S0IX0rJbaZI/AAAAAAAAARM/ApevT8yDs-g/s1600/bullet.jpg) left no-repeat;
+
+padding: 2px 0px 2px 6px; font: normal 12px/14px Verdana, Geneva, sans-serif; background: url(http://1.bp.blogspot.com/_k_DnmK4oz2Q/S1et0vjVIHI/AAAAAAAAAhk/YYCtWzFoJ3M/s1600/cat-arrow.png) no-repeat left 6px;
+}
+
+.sidebar a{
+color: #993300;
+}
+
+.sidebar a:hover{
+color: #ff6600
+}
+
+.sidebar .widget, .main .widget {
+}
+.main .Blog {
+border-bottom-width: 0;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+padding: 4px;
+border: 1px solid #cccccc;
+}
+.profile-data {
+margin:0;
+text-transform:normal;
+letter-spacing:.1em;
+font: normal normal 100% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+color: #666;
+font-weight: bold;
+line-height: 1.6em;
+}
+.profile-datablock {
+margin:.5em 0 .5em;
+}
+.profile-textblock {
+margin: 0.5em 0;
+line-height: 1.6em;
+}
+.profile-link {
+font: italic normal 100% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;
+text-transform: normal;
+letter-spacing: .1em;
+}
+/* Footer
+----------------------------------------------- */
+/* Footer
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.footer { width: 880px; background: url(http://4.bp.blogspot.com/_k_DnmK4oz2Q/S1et1PxylmI/AAAAAAAAAhw/F3vAeya7yP4/s1600/footer-bkg.png) no-repeat left top; padding: 40px 50px 10px 50px; overflow: hidden; margin-bottom: 20px; float: left;}
+.footer hr { border-left:none; border-right: none; border-top:1px solid #ccc; border-bottom: none; height : 1px; display: block; margin-bottom: 10px; }
+.footer p { padding: 1px 0px; color:#999; font-size: 11px;}
+.footer p a, .footer p a:visited, .footer p a:hover {color:#cccccc; text-decoration: underline;}
+.paginator {
+font-family: Trebuchet MS;
+margin-top:60px;
+font-size:1.1em;
+}
+.paginator table {
+border-collapse:collapse;
+table-layout:fixed;
+width:100%;
+}
+.paginator table td {
+padding:0;
+white-space:nowrap;
+text-align:center;
+}
+.paginator span {
+display:block;
+padding:3px 0;
+color:#fff;
+}
+.paginator span strong,
+.paginator span a {
+padding:2px 6px;
+}
+.paginator span strong {
+background:#996633;
+font-style:normal;
+font-weight:bold;
+}
+.paginator .scroll_bar {
+width:100%;	height:20px;
+position:relative;
+margin-top:10px;
+}
+.paginator .scroll_trough {
+width:100%;	height:3px;
+background:#E8E8E8;
+overflow:hidden;
+}
+.paginator .scroll_thumb {
+position:absolute;
+z-index:2;
+width:0; height:3px;
+top:0; left:0;
+font-size:1px;
+background:#363636;
+}
+.paginator .scroll_knob {
+position:absolute;
+top:-5px; left:50%;
+margin-left:-10px;
+width:20px; height:20px;
+overflow:hidden;
+background:url(http://2.bp.blogspot.com/_yssney0-fJM/S0xRyxVUa1I/AAAAAAAABlk/90JTuau4QLk/s1600/Knob.png) no-repeat 50% 50%;
+cursor:pointer; cursor:hand;
+}
+.paginator .current_page_mark {
+position:absolute;
+z-index:1;
+top:0; left:0;
+width:0; height:3px;
+overflow:hidden;
+background:#996633;
+}
+.fullsize .scroll_thumb {
+display:none;
+}
+.paginator_pages {
+width:600px;
+text-align:right;
+font-size:0.8em;
+color:#808080;
+margin-top:-10px;
+}
+
+------------------------------------------אני הוספתי------------------------------
+#paper {
+background: #fff url(http://lh6.ggpht.com/_7wsQzULWIwo/Swl0EMtcKhI/AAAAAAAACTo/Qwj5tCs82JM/notebook-withoutpink%5B2%5D.gif?imgmax=800) repeat-y ; 
+margin: 0 20px; 
+padding: 20px 20px 20px 55px; 
+color:#7A7A7A; 
+font: bold 0.9em  "Comic Sans MS", verdana; 
+line-height: 155% 
+} 
+
+paper p { 
+margin: 0; 
+}
+
+#wrapperSheet {
+	width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:24px;
+	margin-bottom:100px;
+}
+
+#text {
+background: #fff url(http://lh6.ggpht.com/_7wsQzULWIwo/Swl0EMtcKhI/AAAAAAAACTo/Qwj5tCs82JM/notebook-withoutpink%5B2%5D.gif?imgmax=800) repeat-y ; 
+margin: 0 20px; 
+padding: 20px 20px 20px 55px; 
+color:#7A7A7A; 
+font: bold 0.9em  "Comic Sans MS", verdana; 
+line-height: 155% 
+}
+

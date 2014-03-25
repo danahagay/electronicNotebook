@@ -1,0 +1,438 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+border: 0px;
+margin: 0px;
+font-family: Georgia, "Times New Roman", Times, serif;
+background:url(Images/bg.jpg) no-repeat center top;
+color: #5662c1;
+overflow-x: hidden;
+font-size: 14px;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+div#divDetails.table
+{
+    text-align:right;
+    float:right;
+    direction:rtl;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+    font-family: cursive;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-right: 387px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    float: right;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+    direction: rtl;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+.tblSchedule
+{
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	 margin: 100px auto;
+    text-align: center;
+}
+
+
+
+td{
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+    text-shadow: 0 1px rgba(255,255,255,.8);        
+    background: #fff;      
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+.main_container{
+width:830px;
+height:885px;
+margin:0px auto auto auto;
+position:relative;
+}
+
+.top_social_icons{
+position:absolute;
+width:176px;
+height:38px;
+background:url(Images/top_social_bg.gif) no-repeat center;
+top:0px; left:260px;
+padding:6px 0 0 90px;
+}
+
+div.hideSkiplink
+{
+    background-color:transparent;
+    width:100%;
+    margin-top: 80px;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+    float:right;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: transparent;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+div#NavigationMenu.menu
+{
+    float: right;
+}
+
+.tabs ul {
+    list-style: none;
+}
+
+.tabs ul li {
+    float: left;
+    background: #eee;
+    border: 1px #aaa solid;
+    border-bottom: none;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.tabs ul li.active {
+    margin-bottom: -1px;
+    padding-bottom: 6px;
+}
+
+.tabInner {
+    clear: both;
+    border: 1px solid #aaa;
+    height: 200px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.tabInner div {
+    height: 200px;
+    padding: 10px;
+
+}
+
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: right;
+    text-align: right;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+    float: left;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+body#bodyWelcome
+{
+border: 0px;
+margin: 0px;
+font-family: Georgia, "Times New Roman", Times, serif;
+background: url(Images/bg (1).jpg) no-repeat center top;
+color: #5662c1;
+overflow-x: hidden;
+font-size: 14px;
+}
+
+#divDetails
+{
+    float:right;
+    text-align:right;
+}
+
+div.divBtnSave
+{
+ float: left;
+ margin-left: 200px;
+ margin-top: 45px;
+}
+
+div#warap
+{
+width: 830px;
+height: 885px;
+margin: 0px auto auto auto;
+position: relative;
+background-color:Aqua;
+}
+
+input#btnNewProfile
+{
+height: 125px;
+width: 220px;
+border-radius: 20px;
+background-color: white;
+border-bottom-color: transparent;
+margin-top: 245px;
+margin-left: 430px;
+border-right-color: transparent;
+}
+
+div.log
+{
+margin-top: 150px;
+float: right;
+text-align: center;
+margin-right: 495px;
+}
+
+div.divCourses
+{
+direction: rtl;
+height: 250px;
+width: 600px;
+margin-left: 394px;
+border-style: solid;
+}
